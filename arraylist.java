@@ -2,19 +2,24 @@ import java.util.*;
 
 public class arraylist {
     public static void main(String[] args) {
-        ArrayList<String> cars = new ArrayList<String>();
+        ArrayList<String> cars = new ArrayList<>();
         cars.add("volvo"); // Adding elements to the ArrayList
         cars.add("BMW");
         System.out.println(cars);
         cars.add(0, "ford"); // Adding an element at a specific index
-        System.out.println(cars);
+        // System.out.println(cars);
         System.out.println(cars.get(1)); // Accessing an element at a specific index
         System.out.println(cars.size()); // Getting the size of the ArrayList
         System.out.println(cars.remove(1)); // Removing an element at a specific index
         System.out.println(cars);
         Collections.sort(cars); // Sorting the ArrayList
+        System.out.println("Sorted " + cars);
+        Collections.sort(cars, Collections.reverseOrder());
+        System.out.println("Reverse Sorted " + cars);
         System.out.println(cars);
+        System.out.println(cars.contains("volvo"));
 
+        System.out.println("Finally sorted list " + cars);
         // array list of integers
         ArrayList<Integer> numbers = new ArrayList<Integer>();
         numbers.add(15);
@@ -36,5 +41,7 @@ public class arraylist {
             sum2 += i; // Calculating the sum of elements
         }
         System.out.println("Sum2 :" + sum2); // Printing the sum of elements
+
+        System.out.println(cars);
     }
 }
